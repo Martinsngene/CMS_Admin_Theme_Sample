@@ -1,0 +1,404 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Admin Area | Users</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style-cms-admin-theme.css">
+<script src="https://kit.fontawesome.com/6c1d87a64b.js" crossorigin="anonymous"></script>
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
+  </head>
+  <body>
+    
+      <nav class="navbar navbar-expand-md navbar-dark  ">
+          <a class="navbar-brand" href="#">Adminstrap</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav  mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Index.html">Dashboard<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages.html">Pages</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="posts.html">Posts</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="users.html">Users</a>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Welcome, Martins</a>
+                   <li class="nav-item">
+                  <a class="nav-link" href="login.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+      <header id="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+              <h1> <i class="fa fa-cog "></i> Posts <small>Manage Blog Posts</small></h1>
+            </div>
+            <div class="col-md-2">
+              
+                <div class="dropdown create">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <span class="content-header-style">Create Content</span>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" type="button" data-toggle="modal" data-target="#addPage">Add Page</a>
+                    <a class="dropdown-item" type="button" data-toggle="modal" data-target="#addPost">Add Post</a>
+                    <a class="dropdown-item" type="button" data-toggle="modal" data-target="#addUser">Add User</a>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb">
+            <li class="active">
+            Users
+            </li>
+            
+          </ol>
+          
+        </div>
+        
+      </section>
+
+      <section class="container">
+        <div class="row">
+            <div class="col-md-3">
+                 <div class="list-group">
+                    <a href="index.html" class="list-group-item list-group-item-action active">
+                       <i class="fas fa-cog"></i>Dashboard
+                    </a>
+                    <a href="pages.html" class="list-group-item list-group-item-action"><i class="fas fa-address-book"></i>Pages <span class="badge">11</span></a>
+                    <a href="Posts.html" class="list-group-item list-group-item-action"><i class="fas fa-pen"></i>Posts<span class="badge">34</span></a>
+                    <a href="users.html" class="list-group-item list-group-item-action"><i class="fas fa-user"></i>Users<span class="badge">211</span></a>
+                </div>
+
+
+          <div class="well">
+                        <h4>Disk Space Used</h4>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%
+                          </div>
+                        </div>
+
+                      <h4>Banwidth</h4>
+                      <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%
+                          </div>
+                      </div>
+                    </div>
+   
+            </div> 
+
+                <!-- Webite Overview -->
+                   <div class="col-md-9">
+                    <div class="card ">
+                      <div class="card-header main-color-bg">Users</div>
+                      <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                              <input type="text" class="form-control" placeholder="Filter Users...">
+                            </div>
+                          
+                        </div>
+                        <br>
+                        <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Joined</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark Otto</td>
+                            <td>markotto@gmail.com</td>
+                            <td>Dec 12, 2018</td>
+                            <td><a class="btn btn-default" href="#">Edit</a><a class="btn btn-danger" href="#">Delete</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob Thornton</td>
+                            <td>jacobthornton@gmail.com</td>
+                            <td>Jan 6, 2019</td>
+                            <td><a class="btn btn-default" href="#">Edit</a><a class="btn btn-danger" href="#">Delete</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry Steve</td>
+                            <td>larrysteve@gmail.com</td>
+                            <td>Oct 5, 2020</td>
+                            <td><a class="btn btn-default" href="#">Edit</a><a class="btn btn-danger" href="#">Delete</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Benny Joe</td>
+                            <td>bennyjoe@gmail.com</td>
+                            <td>Dec 11, 2018</td>
+                            <td><a class="btn btn-default" href="#">Edit</a><a class="btn btn-danger" href="#">Delete</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Markus Wayne</td>
+                            <td>markuswayne@gmail.com</td>
+                            <td>Jan 8, 2019</td>
+                            <td><a class="btn btn-default" href="#">Edit</a><a class="btn btn-danger" href="#">Delete</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Stephen Wales</td>
+                            <td>stephenwales@gmail.com</td>
+                            <td>Oct 7, 2020</td>
+                            <td><a class="btn btn-default" href="#">Edit</a><a class="btn btn-danger" href="#">Delete</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  
+                    
+                  </div>
+                    
+                        </div>
+                            </div>
+                              </div>
+                                </div>
+        
+      </section>
+
+      <footer id="footer">
+          <p>
+            Copyright Martinium Unlimited Tech &copy; 2021.
+          </p>
+      </footer>
+
+
+      <!-- MODALS -->
+
+      <!-- Add Page -->
+      <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Add Page
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label>Page Title</label>
+                    <input type="text" class="form-control" placeholder="Page Title">
+                  </div>
+                  <div class="form-group">
+                    <label>Page Body</label>
+                    <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox">Published
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label>Meta Tags</label>
+                    <input type="text" class="form-control" placeholder="Add Some Tags...">
+                  </div>
+                  <div class="form-group">
+                    <label> Meta Description </label>
+                    <input type="text" class="form-control" placeholder="Add Meta Description...">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Post -->
+      <div class="modal fade" id="addPost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Add Post</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                        <label>Page Title</label>
+                        <input type="text" class="form-control" placeholder="Page Title">
+                      </div>
+                      <div class="form-group">
+                        <label>Page Body</label>
+                        <textarea name="editor2" class="form-control" placeholder="Page Body"></textarea>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">Published
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label>Meta Tags</label>
+                        <input type="text" class="form-control" placeholder="Add Some Tags...">
+                      </div>
+                      <div class="form-group">
+                        <label> Meta Description </label>
+                        <input type="text" class="form-control" placeholder="Add Meta Description...">
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add User -->
+      <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <form class="needs-validation" novalidate>
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Add User</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                      <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="First" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationCustom02">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Last" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          </div>
+                          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">City</label>
+                        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label for="validationCustom04">State</label>
+                        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label for="validationCustom05">Zip</label>
+                        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                          Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Submit form</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+          <script>
+                        CKEDITOR.replace( 'editor1' );
+                </script>
+                <script>
+                        CKEDITOR.replace( 'editor2' );
+                </script>
+          <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
+
+            
+  </body>
+</html>
